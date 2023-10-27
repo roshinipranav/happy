@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<HTML>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+       BOOKING
+    </title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+            background-color: rgb(231, 231, 231);
+        }
+
+        .maingroup {
+            height: 600px;
+            width: 580px;
+            background-color: white;
+            box-shadow: 8px 8px 20px rgb(128, 128, 128);
+            position: relative;
+            overflow: hidden;
+        }
+  
+
+        .ftop {
+            height: 60px;
+            width: 300px;
+            margin: 20px auto;
+            border-radius: 30%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        input[type=text]{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        /* Style the label to display next to the inputs */
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        /* Style the submit button */
+        button{
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+           
+        }
+        .row {
+            margin-left: 200px;
+        }
+        /* Style the container */
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        /* Floating column for labels: 25% width */
+        .fcolumns {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <div class="maingroup">
+        <section id="first-tab-group" class="tabgroup">
+            <div id="tab1">
+                <div class="submit-form">
+                    <h3 class="ftop"><b>Check Availability For Direction</b></h3>
+                    <form id="form-submit" method="get" >
+                        <div class="row">
+                            <div class="fcolumn">
+
+                                <label for="from">From:</label>
+                                <select required name='from'>
+                                    <option value="">Select a location...</option>
+                                    <option value="Cambodia">Cambodia</option>
+                                    <option value="Hong Kong">Hong Kong</option>
+                                    <option value="India">India</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="Korea">Korea</option>
+                                    <option value="Laos">Laos</option>
+                                    <option value="Myanmar">Myanmar</option>
+                                    <option value="Singapore">Singapore</option>
+                                    <option value="Thailand">Thailand</option>
+                                    <option value="Vietnam">Vietnam</option>
+                                </select>
+
+                            </div>
+                            <div class="fcolumn">
+
+                                <label for="to">To:</label>
+                                <select required name='to'>
+                                    <option value="">Select a location...</option>
+                                    <option value="Cambodia">Cambodia</option>
+                                    <option value="Hong Kong">Hong Kong</option>
+                                    <option value="India">India</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="Korea">Korea</option>
+                                    <option value="Laos">Laos</option>
+                                    <option value="Myanmar">Myanmar</option>
+                                    <option value="Singapore">Singapore</option>
+                                    <option value="Thailand">Thailand</option>
+                                    <option value="Vietnam">Vietnam</option>
+                                </select>
+
+                            </div>
+                            <div class="fcolumn">
+                                <label for="departure">Departure date:</label>
+                            </div>
+                            <div>
+                                <input name="deparure" type="date" class="form-control date" id="deparure"
+                                    placeholder="Select date..." required="required">
+
+                            </div>
+                            <div class="fcolumn">
+                                <label for="return">Return date:</label>
+                            </div>
+                            <div >
+                                <input name="return" type="date" class="form-control date" id="return"
+                                    placeholder="Select date..." required="required">
+
+                            </div>
+                            <div class="fcolumn">
+                                <input type="radio" name="trip" id="round" value="round"
+                                required="required">
+                                <label for="round">Round</label>
+                                <input type="radio" name="trip" id="oneway" value="one-way"
+                                    required="required">
+                                <label for="oneway">Oneway</label>
+                                
+                            </div>
+                            <div class="fcolumn">
+                                <button type="submit" onclick="bmessage()" class="btn">Order Ticket Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</HTML>
